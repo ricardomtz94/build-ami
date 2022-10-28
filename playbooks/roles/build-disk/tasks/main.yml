@@ -19,10 +19,9 @@
     force: yes
 
 - name: Install required packages  
-  apt:
-    #update_cache: yes
+  yum:
+    update_cache: yes
     name:
-      - debian-archive-keyring
       - parted
       - e2fsprogs
       - gnupg
