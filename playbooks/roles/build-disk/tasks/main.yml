@@ -22,6 +22,7 @@
   apt:
     update_cache: yes
     name:
+      - debian-archive-keyring
       - parted
       - e2fsprogs
       - gnupg
