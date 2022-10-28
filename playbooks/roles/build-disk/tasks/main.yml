@@ -20,6 +20,9 @@
 
 - name: Install required packages
   apt:
+    name: debian-archive-keyring
+    state: present    
+  apt:
     update_cache: yes
     name:
       - parted
