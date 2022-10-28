@@ -3,6 +3,6 @@
   hosts: ec2
   user: admin
   become: True
-  #gather_facts: True
+  gather_facts: True
   roles:
     - build-disk
