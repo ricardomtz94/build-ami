@@ -18,10 +18,7 @@
     mode: 0644
     force: yes
 
-- name: Install required packages
-  apt:
-    name: debian-archive-keyring
-    state: present    
+- name: Install required packages  
   apt:
     update_cache: yes
     name:
