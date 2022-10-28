@@ -1,3 +1,14 @@
+---
+- name: remove sources.list
+  file:
+    path: "/etc/apt/sources.list"
+    state: absent
+
+- name: remove sources.list.d
+  file:
+    path: "/etc/apt/sources.list.d"
+    state: absent
+    
 - name: update sources.list
   copy:
     src: "files/sources.list"
@@ -9,7 +20,7 @@
 
 - name: Install required packages  
   apt:
-    update_cache: yes
+    #update_cache: yes
     name:
       - debian-archive-keyring
       - parted
