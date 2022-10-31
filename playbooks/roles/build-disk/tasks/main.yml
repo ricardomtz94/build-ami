@@ -19,8 +19,8 @@
     force: yes
 
 - name: Install required packages  
-  yum:
-    update_cache: yes
+  apt:
+    #update_cache: yes
     name:
       - parted
       - e2fsprogs
