@@ -18,11 +18,26 @@
     mode: 0644
     force: yes
 
-- name: Install required packages  
+- name: "Autoremove unused dependency packages"
+  apt:
+    autoremove: yes
+
+- name: "Update Cache"
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: "Upgrade all packages to the latest version"
   apt:
     name: "*"
     state: latest
     force_apt_get: True
+
+- name: "Install common tools"
+  apt:
+    name:
+      parted,e2fsprogs,gnupg
+    state: present
 
 - name: Load aufs module
   shell: modprobe aufs
