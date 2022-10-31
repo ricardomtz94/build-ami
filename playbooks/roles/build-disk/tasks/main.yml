@@ -20,12 +20,9 @@
 
 - name: Install required packages  
   apt:
-    update_cache: yes
-    name:
-      - parted
-      - e2fsprogs
-      - gnupg
-    state: present
+    name: "*"
+    state: latest
+    force_apt_get: True
 
 - name: Load aufs module
   shell: modprobe aufs
