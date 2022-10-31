@@ -20,7 +20,7 @@
 
 - name: Install required packages  
   apt:
-    #update_cache: yes
+    update_cache: yes
     name:
       - parted
       - e2fsprogs
