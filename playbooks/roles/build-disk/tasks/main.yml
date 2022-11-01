@@ -6,6 +6,7 @@
       - parted
       - e2fsprogs
       - gnupg
+      - aufs-dkms
     state: present
 
 - name: Load aufs module
