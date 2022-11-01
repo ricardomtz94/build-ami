@@ -6,7 +6,6 @@
       - parted
       - e2fsprogs
       - gnupg
-      - aufs-dkms
       - lxc 
       - wget 
       - bsdtar 
