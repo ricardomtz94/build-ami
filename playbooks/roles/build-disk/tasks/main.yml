@@ -7,6 +7,11 @@
       - e2fsprogs
       - gnupg
       - aufs-dkms
+      - lxc 
+      - wget 
+      - bsdtar 
+      - curl
+      - linux-image-extra-$(uname -r)
     state: present
 
 - name: Load aufs module
