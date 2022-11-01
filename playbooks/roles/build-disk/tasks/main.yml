@@ -8,7 +8,6 @@
       - gnupg
       - lxc 
       - wget 
-      - bsdtar 
       - curl
       - linux-image-extra-$(uname -r)
     state: present
