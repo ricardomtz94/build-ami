@@ -8,15 +8,6 @@
   file:
     path: "/etc/apt/sources.list.d"
     state: absent
-    
-- name: update sources.list
-  copy:
-    src: "files/sources.list"
-    dest: "/etc/apt/sources.list"
-    owner: root
-    group: root
-    mode: 0644
-    force: yes
 
 - name: Install required packages
   apt:
