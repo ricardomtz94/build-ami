@@ -17,10 +17,11 @@
     group: root
     mode: 0644
     force: yes
+    
 - name: Install required packages
   apt:
     update_cache: yes
-    name:
+    pkg:
       - parted
       - e2fsprogs
       - gnupg
