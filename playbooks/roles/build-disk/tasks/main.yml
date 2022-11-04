@@ -18,14 +18,29 @@
     mode: 0644
     force: yes
     
-- name: Install required packages
+ - name: Install the package "parted"
   apt:
-    update_cache: yes
-    name:
-      - parted
-      - e2fsprogs
-      - gnupg
+    name: parted
     state: present
+    
+ - name: Install the package "e2fsprogs"
+  apt:
+    name: e2fsprogs
+    state: present
+    
+ - name: Install the package "gnupg"
+  apt:
+    name: gnupg
+    state: present
+    
+#- name: Install required packages
+#  apt:
+#    update_cache: yes
+#   name:
+#      - parted
+#      - e2fsprogs
+#      - gnupg
+#    state: present
 
 - name: Load aufs module
   shell: modprobe aufs
