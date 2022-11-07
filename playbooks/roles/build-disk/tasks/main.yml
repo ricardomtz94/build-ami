@@ -19,21 +19,21 @@
     force: yes
     
 - name: Install required packages parted
-  apt:
+  package:
     update_cache: yes
    name:
       - parted
     state: present
     
 - name: Install required packages e2fsprogs
-  apt:
+  package:
     update_cache: yes
    name:
       - e2fsprogs
     state: present
     
 - name: Install required packages gnupg
-  apt:
+  package:
     update_cache: yes
    name:
       - gnupg
