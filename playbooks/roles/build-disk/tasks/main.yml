@@ -21,19 +21,22 @@
  - name: Install the package parted
   apt:
     update_cache: yes
-   name: parted
+   name: 
+     - parted
    state: present
     
  - name: Install the package e2fsprogs
   apt:
     update_cache: yes
-   name: e2fsprogs
+   name: 
+    - e2fsprogs
    state: present
     
  - name: Install the package gnupg
   apt:
     update_cache: yes
-   name: gnupg
+   name: 
+    - gnupg
    state: present
     
 #- name: Install required packages
