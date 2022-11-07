@@ -18,26 +18,27 @@
     mode: 0644
     force: yes
     
- - name: Install the package parted
+- name: Install required packages parted
   apt:
     update_cache: yes
-   name: 
-     - parted
-   state: present
+   name:
+      - parted
+    state: present
     
- - name: Install the package e2fsprogs
+- name: Install required packages e2fsprogs
   apt:
     update_cache: yes
-   name: 
-    - e2fsprogs
-   state: present
+   name:
+      - e2fsprogs
+    state: present
     
- - name: Install the package gnupg
+- name: Install required packages gnupg
   apt:
     update_cache: yes
-   name: 
-    - gnupg
-   state: present
+   name:
+      - gnupg
+    state: present
+
     
 #- name: Install required packages
 #  apt:
