@@ -17,11 +17,11 @@
     group: root
     mode: 0644
     force: yes
-    
+
 - name: Install required packages
   apt:
     update_cache: yes
-   name:
+    name:
       - parted
       - e2fsprogs
       - gnupg
@@ -253,4 +253,3 @@
     src: "{{ vyos_iso_local }}"
     fstype: iso9660
     state: unmounted
-
